@@ -707,10 +707,6 @@
       "dashboardappUrl": {
         "type": "string",
         "value": "[variables('dashboardAppUrl')]"
-      },      
-      "configurationUrl": {
-        "type": "string",
-        "value": "[variables('configurationUrl')]"
       },
       "contentUrl": {
         "type": "string",
