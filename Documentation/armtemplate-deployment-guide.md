@@ -133,42 +133,6 @@ clientId|The Application (client) ID of the [QBot API Auth App Registration](#qb
 Open up `Source\DashboardTabApp\src\environments\environment.prod.ts` and make the above changes.
 
 ------------
-In the fork repository, open up `Source\QuestionTabApp\src\environments\environment.ts` and make the following changes
-``` typescript
-export const environment = {
-    production: false,
-    apiBaseUrl: "https://<<BaseResourceName>>.azurewebsites.net/api/Request/",
-    selfUrl: "",
-
-    authConfig: {
-        instance: "https://login.microsoftonline.com/",
-        tenantId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
-        clientId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
-        redirectUri: "/app-silent-end",
-        cacheLocation: "localStorage",
-        navigateToLoginRequestUrl: false,
-        extraQueryParameters: "",
-        popUp: true,
-        popUpUri: "/app-silent-start",
-        popUpWidth: 600,
-        popUpHeight: 535
-    },
-
-    // do not populate the following:
-    upn: "",
-    tid: "",
-    gid: "",
-    cname: ""
-};
-```
-Key|Value
-:-|:-
-apiBaseUrl|The URL where the QBot API Web App will be deployed, with `/api/Request/` appended. eg: `https://<<BaseResourceName>>.azurewebsites.net/api/Request/`
-tenantId|The Directory (tenant) ID of the [QBot API Auth App Registration](#qbot-api-auth-app-registration). Copy value from Notepad.
-clientId|The Application (client) ID of the [QBot API Auth App Registration](#qbot-api-auth-app-registration). Copy value from Notepad.
-selfUrl|The base URL where this [Questions Tab App](#questions-tab-web-app) Angular app will be deployed, eg: `https://<<BaseResourceName>>-questions.azurewebsites.net`
-
-Open up `Source\QuestionTabApp\src\environments\environment.prod.ts` and make the above changes.
 
 # Step 4: Encrypt QBot service account password
 1. In the local copy of the fork repository, open `StringEncryption.exe` under `PasswordEncryptionTool` folder.
