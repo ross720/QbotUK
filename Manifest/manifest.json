@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
-  "id": "3d5f80fc-e314-45f7-9900-b04b70494bad",
+  "id": "bdd735c4-91e4-400c-a5ef-651ee712bdea",
   "packageName": "qbot",
   "developer": {
-    "name": "Uni Contoso Two",
+    "name": "University of Contoso",
     "websiteUrl": "https://www.unsw.edu.au/QBot",
     "privacyUrl": "https://www.unsw.edu.au/QBot/privacy",
     "termsOfUseUrl": "https://www.unsw.edu.au/QBot/tou"
@@ -25,7 +25,7 @@
   "accentColor": "#6264A7",
   "bots": [
     {
-      "botId": "3d5f80fc-e314-45f7-9900-b04b70494bad",
+      "botId": "bdd735c4-91e4-400c-a5ef-651ee712bdea",
       "scopes": [
         "team"
       ]
@@ -35,7 +35,7 @@
     {
       "entityId": "DashboardTab",
       "name": "Dashboard",
-      "contentUrl": "https://qbotukcontosotwo-dashboard.azurewebsites.net/home?upn={loginHint}&tid={tid}&gid={groupId}&uid={userObjectId}",
+      "contentUrl": "https://qboteduukunicontoso-dashboard.azurewebsites.net/home?upn={loginHint}&tid={tid}&gid={groupId}&uid={userObjectId}",
       "scopes": [ "personal" ]
     }
   ],
@@ -43,5 +43,5 @@
     "identity",
     "messageTeamMembers"
   ],
-  "validDomains": [ "qbotukcontosotwo-dashboard.azurewebsites.net", "qbotukcontosotwo.azurewebsites.net" ]
+  "validDomains": [ "qboteduukunicontoso-dashboard.azurewebsites.net", "qboteduukunicontoso.azurewebsites.net" ]
 }
