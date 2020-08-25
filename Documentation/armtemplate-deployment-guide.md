@@ -96,8 +96,8 @@ Choose a "Base Resource Name", which the template uses to generate names for the
    * Remember the base resource name should not end in a numeric as that is known to cause deployment failures.
    * Remember the base resource name that you selected. We will need it for setting up Angular apps - Dashboard Tab & Questions Tab as well as Azure deployment.
    
-# Step 3: Setup Angular apps - Dashboard Tab & Questions Tab for deployment
-There are 2 Teams tabs, developed as Angular applications. They are in the projects: `DashboardTabApp` and `QuestionsTabApp`. Both are built and deployed in the same way.
+# Step 3: Setup Angular apps - Dashboard Tab for deployment
+There is the Teams tab, developed as Angular applications. It is in the project: `DashboardTabApp`.
 
 In fork repository, open up `Source\DashboardTabApp\src\environments\environment.ts` and make the following changes
 ``` typescript
@@ -204,7 +204,7 @@ Open up `Source\DashboardTabApp\src\environments\environment.prod.ts` and make t
 	* sqlServerFqdn - SQL Server fully qualified domain name.
 	* databaseName - SQL database name.
 
-# Step 6: Set up authentication for the Dashboard and Questions apps
+# Step 6: Set up authentication for the Dashboard app
 1. Go back to the "App Registrations" page [here](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview).
 
 2. Click on the QBot API Auth app in the application list. Under "Manage", click on "Authentication" to bring up authentication settings.
@@ -212,9 +212,6 @@ Open up `Source\DashboardTabApp\src\environments\environment.prod.ts` and make t
 	1. First entry:
 	    * **Type**: Web
 	    * **Redirect URI**: Enter the dashboard app url from Notepad file, append with /app-silent-end. If the base name is "contosoqbot", then enter "https://contosoqbot-dashboard.azurewebsites.net/app-silent-end"
-	1. Second entry:
-	    * **Type**: Web
-	    * **Redirect URI**: Enter the questions app url from Notepad file, append with /app-silent-end. If the base name is "contosoqbot", then enter "https://contosoqbot-questions.azurewebsites.net/app-silent-end"
 
 4. Under "Implicit grant", check "ID tokens".
 
@@ -286,7 +283,7 @@ Use the following values when connecting to the QnA service:
 > 4. **QnA HTTP Key**
 > 5. **QnA HTTP Endpoint** - Make sure the QnA HTTP Endpoint ends with /qnamaker/v4.0. If not, append the same so that the endpoint URL appears similar to above image. 
 
-# Step 11: Surface QBot into Microsoft Teams
+# Step 11: Deploy QBot into Microsoft Teams
 ### Prepare the manifest file
 
 Edit the `manifest.json` file, and replace the following values:
@@ -346,7 +343,7 @@ Edit the `manifest.json` file, and replace the following values:
     "identity",
     "messageTeamMembers"
   ],
-  "validDomains": [ "qbot-dashboard-tab.azurewebsites.net", "qbot-questions-tab.azurewebsites.net", "qbot-api.azurewebsites.net" ]
+  "validDomains": [ "qbot-dashboard.azurewebsites.net", "qbot-api.azurewebsites.net" ]
 }
 ```
 
