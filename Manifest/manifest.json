@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
-  "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
+  "id": "3d5f80fc-e314-45f7-9900-b04b70494bad",
   "packageName": "qbot",
   "developer": {
-    "name": "UNSW Sydney",
+    "name": "Uni Contoso Two",
     "websiteUrl": "https://www.unsw.edu.au/QBot",
     "privacyUrl": "https://www.unsw.edu.au/QBot/privacy",
     "termsOfUseUrl": "https://www.unsw.edu.au/QBot/tou"
@@ -23,18 +23,9 @@
     "full": "QBot keeps track of answered and unanswered questions, sends notifications to tutors and teachers in charge, and dynamically constructs its own knowledge database on the subject to help suggest answers in future. Just tag @Question in the conversations tab of your class team."
   },
   "accentColor": "#6264A7",
-  "configurableTabs": [
-      {
-        "configurationUrl": "https://qbot-questions-tab.azurewebsites.net/config?upn={loginHint}&tid={tid}&gid={groupId}&cname={channelName}",
-        "canUpdateConfiguration": true,
-        "scopes": [
-          "team"
-        ]
-      }
-    ],
   "bots": [
     {
-      "botId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
+      "botId": "3d5f80fc-e314-45f7-9900-b04b70494bad",
       "scopes": [
         "team"
       ]
@@ -44,7 +35,7 @@
     {
       "entityId": "DashboardTab",
       "name": "Dashboard",
-      "contentUrl": "https://qbot-dashboard-tab.azurewebsites.net/home?upn={loginHint}&tid={tid}&gid={groupId}&uid={userObjectId}",
+      "contentUrl": "https://qbotukcontosotwo-dashboard.azurewebsites.net/home?upn={loginHint}&tid={tid}&gid={groupId}&uid={userObjectId}",
       "scopes": [ "personal" ]
     }
   ],
@@ -52,5 +43,5 @@
     "identity",
     "messageTeamMembers"
   ],
-  "validDomains": [ "qbot-dashboard-tab.azurewebsites.net", "qbot-questions-tab.azurewebsites.net", "qbot-api.azurewebsites.net" ]
+  "validDomains": [ "qbotukcontosotwo-dashboard.azurewebsites.net", "qbotukcontosotwo.azurewebsites.net" ]
 }
